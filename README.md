@@ -6,7 +6,7 @@ Python SDK for Event Horizon.
 
 1. Clone the repository:
 ```bash
-git clone 
+git clone https://github.com/Mooncore-inc/EH-python-sdk.git
 cd EH-sdk
 ```
 
