@@ -37,7 +37,8 @@ async def main():
         # Retrieve message history
         messages = await client.get_private_messages(limit=10)
         for msg in messages:
-            print(f"\nFrom {msg['sender_did']}: {msg['decrypted_content']}")
+            text = client.decrypt_message(msg['encrypted_key'], msg['iv'], msg['ciphertext'])
+            print(f"\nFrom {msg['sender_did']}: {text}")
         
 if __name__ == "__main__":
     asyncio.run(main())
